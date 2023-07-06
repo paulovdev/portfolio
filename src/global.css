@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background: #f8fafc;
+    --bg: #c6c6c6;
+    --header: #f8fafc;
+
+    --border: #252525;
+
+    --text-color: #222222;
+    --text-color-2: #3f4045;
+
+    --blur: blur(70px);
+
+    --color-special: #222222;
+
+
+}
+
+.light {
+
+    --background: #111111;
+
+    --bg: #151515;
+
+    --header: #151515;
+    --border: #a1a1a1;
+
+    --text-color: #eeeeee;
+    --text-color-2: #717171;
+
+    --blur: blur(70px);
+
+    --color-special: #d4d4d4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font: 1rem 'Inter', sans-serif;
+    cursor: none !important;
+}
+
+
+body {
+    position: relative;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+::placeholder {
+    font-size: 16px;
+}
+
+::selection {
+    background-color: var(--color-special);
+    color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+    width: 0.20rem;
+
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    color: var(--text-color);
+    border-radius: 10px;
+}
+
+.grid-layout {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+#mySpan {
+    display: inline-block;
+    background-color: var(--color-special);
+    margin-left: 0.5rem;
+    width: 6px;
+    height: 6px;
+}
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background-color: var(--color-special);
+    transition: width 0.3s ease;
+}
+
+
+/* CUSTOM-CURSOR */
+@media screen and (max-width: 9999px) {
+
+    div[class*='kursor'].kursor--1,
+    div[class*='kursor'].kursor--1+.kursorChild,
+    div[class*='kursor'] {
+        display: flex !important;
+        z-index: 99999;
+        border: 2px solid var(--text-color);
+        display: block;
+    }
+}
