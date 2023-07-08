@@ -27,22 +27,26 @@ const Header = () => {
     return (
         <header>
             <nav>
-                <p id="logo" title="Go to pxulin.com ?">
+                <p id="logo">
                     pxulin
                 </p>
-                <button id="hamburguer-button" aria-label={isOpen ? "Close menu" : "Open menu"} title={isOpen ? "Close menu" : "Open menu"}>
+                <button id="hamburguer-button"
+                    aria-label={isOpen ? "Close menu" : "Open menu"}
+                    title={isOpen ? "Close menu" : "Open menu"}>
                     <Hamburger
                         direction="right"
                         duration={0.1}
                         easing="ease-in"
                         toggled={isOpen}
                         toggle={setOpen}
+                        aria-label={isOpen ? "Close menu" : "Open menu"}
+                        title={isOpen ? "Close menu" : "Open menu"}
                     />
                 </button>
                 <ul className={isOpen ? "open" : ""}>
                     {navigation.map((item, i) => (
                         <li key={i} onClick={handleClick}>
-                            <a
+                            <a key={item.nav}
                                 className="header-icons"
                                 href={"#" + item.href.toLowerCase()}
                                 aria-label={"Go to " + item.href + "section"}
