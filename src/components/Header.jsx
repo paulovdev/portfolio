@@ -39,14 +39,12 @@ const Header = () => {
                         easing="ease-in"
                         toggled={isOpen}
                         toggle={setOpen}
-                        aria-label={isOpen ? "Close menu" : "Open menu"}
-                        title={isOpen ? "Close menu" : "Open menu"}
                     />
                 </button>
                 <ul className={isOpen ? "open" : ""}>
                     {navigation.map((item, i) => (
                         <li key={i} onClick={handleClick}>
-                            <a key={item.nav}
+                            <a key={i}
                                 className="header-icons"
                                 href={"#" + item.href.toLowerCase()}
                                 aria-label={"Go to " + item.href + "section"}
@@ -57,7 +55,9 @@ const Header = () => {
                     ))}
 
                     <li>
-                        <button onClick={toggleTheme} className="theme-icon" aria-label="Toggle Dark Mode" title={isDarkMode ? "Change to Dark Mode" : "Change to Light Mode"}>
+                        <button onClick={toggleTheme} className="theme-icon"
+                            aria-label={isDarkMode ? "Change to Dark Mode" : "Change to Light Mode"}
+                            title={isDarkMode ? "Change to Dark Mode" : "Change to Light Mode"}>
                             <VscColorMode size={28} />
                         </button>
                     </li>
