@@ -7,21 +7,7 @@ const Projects = () => {
 
     const projectList = [
         {
-            photo: '/pic2.png',
-            href: "https://pxulin.github.io/full-site/",
-
-            title: "Landing page",
-            desc: "full simple modern landing page.",
-        },
-        {
-            photo: '/pic2.png',
-            href: "https://pxulin.github.io/full-site/",
-
-            title: "Landing page",
-            desc: "full simple modern landing page.",
-        },
-        {
-            photo: '/pic2.png',
+            photo: '/pic2.webp',
             href: "https://pxulin.github.io/full-site/",
 
             title: "Landing page",
@@ -51,7 +37,7 @@ const Projects = () => {
                         <div key={project.key}>
                             <div className="card-projects">
                                 <div className="projects-photo-container">
-                                    <img src={project.photo} />
+                                    <img src={project.photo} width={350} height={350} alt="landing page photo" />
                                 </div>
                                 <div className="projects-text-container">
                                     <h1>{project.title}</h1>

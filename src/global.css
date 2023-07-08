@@ -13,7 +13,7 @@ html {
     --border: #a1a1a1;
 
     --text-color: #eeeeee;
-    --text-color-2: #717171;
+    --text-color-2: #8f8f8f;
 
     --blur: blur(70px);
 
@@ -56,7 +56,11 @@ body {
 }
 
 ::placeholder {
-    font-size: 16px;
+    font-size: 0.9rem;
+    line-height: 160%;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 ::selection {
@@ -103,7 +107,7 @@ body {
     left: 0;
     height: 5px;
     background-color: var(--color-special);
-    transition: width 0.3s ease;
+    transition: width 0.1s ease;
 }
 
 

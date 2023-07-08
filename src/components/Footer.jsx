@@ -5,6 +5,7 @@ const Footer = () => {
         <>
             <footer>
                 <p>© 2023 Paulo Vitor. All rights reserved.</p>
+            
             </footer>
         </>
     )

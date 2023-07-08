@@ -29,10 +29,7 @@ const Header = () => {
         <header>
             <nav>
                 <p id="logo" title="Go to pxulin.com ?">
-                    {" "}
-                    <a href="pirocao" target="__blank">
-                        Pxulin <span id="mySpan"></span>
-                    </a>
+                    pxulin
                 </p>
 
                 <Hamburger
@@ -41,6 +38,7 @@ const Header = () => {
                     easing="ease-in"
                     toggled={isOpen}
                     toggle={setOpen}
+                    aria-expanded={isOpen}
                 />
 
                 <ul className={isOpen ? "open" : ""}>
@@ -52,11 +50,11 @@ const Header = () => {
                         </li>
                     ))}
 
-                    <button onClick={toggleTheme}
-                        className="theme-icon">
-                        <VscColorMode size={28} />
-                    </button>
-
+                    <li>
+                        <button onClick={toggleTheme} className="theme-icon" aria-label="Toggle Dark Mode">
+                            <VscColorMode size={28} />
+                        </button>
+                    </li>
                 </ul>
             </nav>
         </header>

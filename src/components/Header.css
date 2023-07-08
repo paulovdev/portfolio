@@ -40,7 +40,8 @@ ul {
     background-color: var(--header);
 
     display: flex;
-    align-items: start;
+    text-align: center;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     overflow: hidden;

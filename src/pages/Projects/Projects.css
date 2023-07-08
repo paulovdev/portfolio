@@ -12,7 +12,6 @@
     display: flex;
     gap: 2rem;
     padding: 1rem;
-    border-radius: 0.5rem;
 }
 
 .projects-text-container {
@@ -64,7 +63,6 @@
 .projects-photo-container {
     width: 200px;
     height: 200px;
-    border-radius: 0.5rem;
     background-color: var(--bg);
 
     display: flex;
