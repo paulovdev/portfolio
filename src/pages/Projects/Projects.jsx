@@ -37,7 +37,7 @@ const Projects = () => {
                         <div key={project.key}>
                             <div className="card-projects">
                                 <div className="projects-photo-container">
-                                    <img src={project.photo} width={350} height={350} alt="landing page photo" />
+                                    <img src={project.photo} width={616} height={405} alt="landing page photo" />
                                 </div>
                                 <div className="projects-text-container">
                                     <h1>{project.title}</h1>

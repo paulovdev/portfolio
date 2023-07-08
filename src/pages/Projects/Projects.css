@@ -98,6 +98,11 @@
         height: 100%;
     }
 
+    .projects-photo-container img {
+        max-width: 300px;
+        height: 200px;
+    }
+
     .card-projects {
         margin-block: 1rem;
         flex-direction: column;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import './styles.css';
-import './global.css';
+import './styles/styles.css';
+import './styles/global.css';
+import './styles/Buttons.css'
 import Header from './components/Header';
 import ScrollButtons from './components/ScrollButtons';
 import Home from './pages/Home/Home';
