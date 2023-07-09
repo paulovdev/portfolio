@@ -17,14 +17,13 @@ html {
 
     --blur: blur(70px);
 
-    --color-special: #d4d4d4;
-
+    --color-special: #ff2323;
 }
 
 .light {
 
     --background: #f8fafc;
-    --bg: #c6c6c6;
+    --bg: #e5e5e5;
     --header: #f8fafc;
 
     --border: #252525;
@@ -34,7 +33,7 @@ html {
 
     --blur: blur(70px);
 
-    --color-special: #222222;
+    --color-special: #23c1ff;
 
 }
 
@@ -51,8 +50,45 @@ html {
 
 body {
     position: relative;
-    background-color: var(--background);
+    background: var(--background);
     color: var(--text-color);
+}
+
+.grid-layout {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+#mySpan {
+    display: inline-block;
+    background-color: var(--color-special);
+    margin-left: 0.5rem;
+    width: 6px;
+    height: 6px;
+}
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 6px;
+    background-color: var(--color-special);
+    transition: width 0.1s ease;
+}
+
+
+/* CUSTOM-CURSOR */
+@media screen and (max-width: 9999px) {
+
+    div[class*='kursor'].kursor--1,
+    div[class*='kursor'].kursor--1+.kursorChild,
+    div[class*='kursor'] {
+        display: flex !important;
+        z-index: 99999;
+        border: 2px solid var(--text-color);
+        display: block;
+    }
 }
 
 ::placeholder {
@@ -86,40 +122,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     color: var(--text-color);
     border-radius: 10px;
-}
-
-.grid-layout {
-    max-width: 1140px;
-    margin: 0 auto;
-}
-
-#mySpan {
-    display: inline-block;
-    background-color: var(--color-special);
-    margin-left: 0.5rem;
-    width: 6px;
-    height: 6px;
-}
-
-.progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 5px;
-    background-color: var(--color-special);
-    transition: width 0.1s ease;
-}
-
-
-/* CUSTOM-CURSOR */
-@media screen and (max-width: 9999px) {
-
-    div[class*='kursor'].kursor--1,
-    div[class*='kursor'].kursor--1+.kursorChild,
-    div[class*='kursor'] {
-        display: flex !important;
-        z-index: 99999;
-        border: 2px solid var(--text-color);
-        display: block;
-    }
 }

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Cross as Hamburger } from "hamburger-react";
 import { VscColorMode } from "react-icons/vsc";
-
+import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
+import { Fade } from 'react-awesome-reveal';
 import "./Header.css";
 
 const Header = () => {
@@ -13,6 +14,12 @@ const Header = () => {
         { nav: "ABOUT", href: "About" },
         { nav: "PROJECTS", href: "Projects" },
         { nav: "CONTACT", href: "Contact" },
+    ];
+
+    const icons = [
+        { iconComponent: FaTwitter, href: "" },
+        { iconComponent: FaFacebook, href: "" },
+        { iconComponent: FaInstagram, href: "" },
     ];
 
     function handleClick() {
@@ -44,8 +51,7 @@ const Header = () => {
                 <ul className={isOpen ? "open" : ""}>
                     {navigation.map((item, i) => (
                         <li key={i} onClick={handleClick}>
-                            <a key={i}
-                                className="header-icons"
+                            <a className="header-icons"
                                 href={"#" + item.href.toLowerCase()}
                                 aria-label={"Go to " + item.href + "section"}
                                 title={"Go to " + item.href + " section"}>
@@ -53,7 +59,6 @@ const Header = () => {
                             </a>
                         </li>
                     ))}
-
                     <li>
                         <button onClick={toggleTheme} className="theme-icon"
                             aria-label={isDarkMode ? "Change to Dark Mode" : "Change to Light Mode"}
@@ -61,6 +66,18 @@ const Header = () => {
                             <VscColorMode size={28} />
                         </button>
                     </li>
+                    <span>socials:</span>
+                    <Fade direction='down' delay={2300} triggerOnce>
+                        <div className="icons">
+                            {icons.map((icon, index) => (
+                                <div key={index} className="icons-container">
+                                    <a href={icon.href} target="_blank" rel="noopener noreferrer">
+                                        {icon.iconComponent && <icon.iconComponent size={28} />}
+                                    </a>
+                                </div>
+                            ))}
+                        </div>
+                    </Fade>
                 </ul>
             </nav>
         </header>

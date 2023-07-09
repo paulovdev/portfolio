@@ -1,7 +1,7 @@
 /* ABOUT */
 #about {
   padding: 100px 50px;
-
+  background-color: var(--bg);
   scroll-snap-align: start;
 }
 
@@ -47,30 +47,4 @@
   #about .text-container h2 {
     font-size: 0.85rem;
   }
-}
-
-/* ICONS */
-.icons {
-  position: relative;
-  display: inline-flex;
-  top: 2rem;
-  gap: 2em;
-}
-
-.icons svg {
-  color: var(--text-color-2);
-  font-weight: 500;
-  border-radius: 0.3rem;
-  cursor: pointer;
-  transition: transform 0.4s ease;
-}
-
-.icons svg:hover {
-  transform: translateY(-10px);
-  transition-delay: 0s;
-  color: var(--color-special);
-}
-
-.icons svg:not(:hover) {
-  transition-delay: 0.2s;
 }

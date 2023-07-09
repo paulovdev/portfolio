@@ -22,36 +22,38 @@ const Projects = () => {
 
     return (
         <section id="projects">
-            <Fade direction='down' cascade duration={800} triggerOnce>
-                <h1 >PROJECTS<span id="mySpan"></span></h1>
-            </Fade>
+            <div className="grid-layout">
+                <Fade direction='down' cascade duration={800} triggerOnce>
+                    <h1 >PROJECTS<span id="mySpan"></span></h1>
+                </Fade>
 
-            <div className="projects-container">
-                {projectList.map((project, index) => (
-                    <Fade
-                        key={index}
-                        direction="up"
-                        duration={700}
-                        delay={index * 100}
-                        triggerOnce>
-                        <div key={project.key}>
-                            <div className="card-projects">
-                                <div className="projects-photo-container">
-                                    <img src={project.photo} width={616} height={405} alt="landing page photo" />
-                                </div>
-                                <div className="projects-text-container">
-                                    <h1>{project.title}</h1>
-                                    <p>{project.desc}</p>
-                                    <div id="item" onClick={() => viewProject(project.href)}>
-                                        <ImAttachment color="var(--color-special)" />
-                                        <a>VIEW PROJECT</a>
+                <div className="projects-container">
+                    {projectList.map((project, index) => (
+                        <Fade
+                            key={index}
+                            direction="up"
+                            duration={700}
+                            delay={index * 100}
+                            triggerOnce>
+                            <div key={project.key}>
+                                <div className="card-projects">
+                                    <div className="projects-photo-container">
+                                        <img src={project.photo} width={616} height={405} alt="landing page photo" />
                                     </div>
-                                </div>
+                                    <div className="projects-text-container">
+                                        <h1>{project.title}</h1>
+                                        <p>{project.desc}</p>
+                                        <div id="item" onClick={() => viewProject(project.href)}>
+                                            <ImAttachment color="var(--color-special)" />
+                                            <a>VIEW PROJECT</a>
+                                        </div>
+                                    </div>
 
+                                </div>
                             </div>
-                        </div>
-                    </Fade>
-                ))}
+                        </Fade>
+                    ))}
+                </div>
             </div>
         </section>
     );

@@ -2,6 +2,7 @@
 #contact {
   padding: 130px 50px;
   text-align: center;
+  background-color: var(--bg);
   scroll-snap-align: start;
 }
 

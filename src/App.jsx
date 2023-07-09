@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import './styles/styles.css';
 import './styles/global.css';
 import './styles/Buttons.css'
-import Header from './components/Header';
-import ScrollButtons from './components/ScrollButtons';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import ScrollButtons from './components/ScrollButtons/ScrollButtons';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Projects from './pages/Projects/Projects';
 import Contact from './pages/Contact/Contact';
-import Footer from './components/Footer';
+
 
 const App = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -29,13 +30,13 @@ const App = () => {
   return (
     <div className='container'>
       <Header />
-      <div className="grid-layout">
-        <Home />
-        <ScrollButtons />
-        <About />
-        <Projects />
-        <Contact />
-      </div>
+
+      <Home />
+      <ScrollButtons />
+      <About />
+      <Projects />
+      <Contact />
+
       <Footer />
       <div className="progress-bar" style={{ width: `${scrollProgress}%` }}></div>
     </div>

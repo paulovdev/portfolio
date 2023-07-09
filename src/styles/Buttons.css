@@ -1,25 +1,21 @@
-#home button,
-#contact button {
-    cursor: pointer;
-    border: none;
-    background: transparent;
+.button-effect {
     position: relative;
-    overflow: hidden;
-    width: 170px;
-    margin-top: 1rem;
     padding: 1rem;
+    background: transparent;
     color: var(--text-color);
-    border-bottom: 3px;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    text-transform: uppercase;
+    width: 150px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+
     border: none;
+    overflow: hidden;
     cursor: pointer;
 }
 
-#home button::before,
-#contact button::before {
+.button-effect::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -30,13 +26,23 @@
     z-index: -1;
 }
 
-#home button:hover::before,
-#contact button:hover::before {
+.button-effect:hover::before {
     left: 0;
     background-color: var(--color-special);
 }
 
+.button-effect:hover svg {
+    transform: translateX(10px);
+}
 
 #contact button {
     width: 100%;
+}
+
+#home button,
+#contact button {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
 }

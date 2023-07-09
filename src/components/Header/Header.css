@@ -3,7 +3,7 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    padding: 0 30px;
+    padding: 15px 40px;
     z-index: 999;
 }
 
@@ -16,32 +16,16 @@ header nav {
     z-index: 999;
 }
 
-#logo,
-#logo a {
-    margin: 0;
-    font: 700 1.2rem/1px 'Inter', sans-serif;
-    text-transform: uppercase;
-    color: var(--text-color-2);
-    z-index: 9999;
-    transition: transform 0.3s;
-
-    &:hover {
-        transform: rotate(3deg) translateY(5px);
-    }
-}
-
 ul {
     position: fixed;
     height: 70vh;
     width: 0;
     top: 0;
     right: 1px;
-    border-radius: 1rem 0 0 1rem;
     background-color: var(--header);
 
     display: flex;
-    text-align: center;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
@@ -65,7 +49,7 @@ ul li a {
     position: relative;
     padding: 2rem;
     color: var(--text-color);
-    font: 700 1.4rem/140% 'Inter', sans-serif;
+    font: 500 1.2rem/140% 'Inter', sans-serif;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     transition: color 0.5s ease;
 }
@@ -76,13 +60,12 @@ ul li a {
     z-index: 999;
 }
 
-nav .theme-icon {
+nav ul span {
     padding: 2rem;
-    color: var(--text-color);
-    max-width: 600px;
-    font: 400 1.2rem/140% 'Inter', sans-serif;
-    margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    color: var(--text-color-2);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
 }
 
 @media (max-width: 768px) {
@@ -97,4 +80,52 @@ nav .theme-icon {
         top: 0;
         right: 0;
     }
+}
+
+#logo,
+#logo a {
+    margin: 0;
+    font: 700 1.2rem/1px 'Inter', sans-serif;
+    text-transform: uppercase;
+    color: var(--text-color-2);
+    z-index: 9999;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: rotate(3deg) translateY(5px);
+    }
+}
+
+nav .theme-icon {
+    padding: 0 2rem;
+    color: var(--text-color);
+    max-width: 600px;
+    font: 400 1.2rem/140% 'Inter', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ICONS */
+.icons {
+    position: relative;
+    display: inline-flex;
+    gap: 1rem;
+    padding: 0 2rem;
+}
+
+.icons svg {
+    color: var(--text-color-2);
+    font-weight: 500;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.icons svg:hover {
+    transform: translateY(-10px);
+    transition-delay: 0s;
+    color: var(--color-special);
+}
+
+.icons svg:not(:hover) {
+    transition-delay: 0.2s;
 }
