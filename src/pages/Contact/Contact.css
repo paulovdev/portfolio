@@ -1,6 +1,6 @@
 /* CONTACT */
 #contact {
-  padding: 130px 50px;
+  padding: 50px 50px;
   text-align: center;
   background-color: var(--bg);
   scroll-snap-align: start;
@@ -9,7 +9,7 @@
 input,
 textarea {
   width: 100%;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
   padding: 1rem;
   background: transparent;
   border: none;

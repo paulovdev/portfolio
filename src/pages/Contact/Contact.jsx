@@ -25,11 +25,6 @@ const Contact = () => {
                             placeholder="Enter your email"
                             required
                         />
-                        <input
-                            type="text"
-                            placeholder="Subject"
-                            required
-                        />
 
                         <textarea
                             placeholder="Message"

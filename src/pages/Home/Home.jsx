@@ -4,27 +4,28 @@ import { Fade } from 'react-awesome-reveal';
 const Home = () => {
   const date = new Date();
   const day = date.getDate();
-  const month = date.getMonth() + 1;
+  const monthNames = [
+    "January", "February", "March", "April", "May", "June", "July",
+    "August", "September", "October", "November", "December"
+  ];
+  const month = monthNames[date.getMonth()];
   const year = date.getFullYear();
 
   return (
     <section id="home">
       <div className="grid-layout">
         <Fade direction='down' cascade duration={1000} triggerOnce>
-          <p>
-            {month + '-' + day + '-' + year}</p>
+          <p>{month + ' ' + day + ', ' + year}</p>
           <h1>HI, MY NAME IS PAULO VITOR, I'M A FRONT-END DEVELOPER<span id="mySpan"></span></h1>
 
           <div className="button-effect">
             <button>contact me </button>
           </div>
-
         </Fade>
       </div>
-    </section >
-
+    </section>
   );
-};
+}
 
 export default Home;
 
